@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>실종자 관리 페이지</title>
+  <!-- Bootstrap core CSS-->
+  <link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="{{ url_for('static',filename='vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="{{ url_for('static',filename='css/sb-admin.css')}}" rel="stylesheet">
+  <!-- Page level plugin CSS-->
+  <link href="{{ url_for('static',filename='vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+<script language="javascript">
+
+function pictureChange1()
+{
+document.getElementById('theImage').src="../static/images/common/hong1.jpg";
+}
+function pictureChange2()
+{
+document.getElementById('theImage').src="../static/images/common/hong2.jpg";
+}
+function pictureChange3()
+{
+document.getElementById('theImage').src="../static/images/common/hong3.jpg";
+}
+</script>
+
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">사진관리</div>
+      <div class="card-body">
+        <form>
+ 		<div class="form-group">
+		<img id=theImage style="width: 200px; height: 200px;" src="../static/images/common/hong1.jpg">
+ 		<div class="form-group">
+             <h6 class="dropdown-header">사진목록</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">
+              <strong>홍길순1.jpg</strong>
+              <span class="small float-right text-muted"><input type="button" id="theButton" value="보기" onclick="pictureChange1()"></span>
+              </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">
+              <strong>홍길순2.jpg</strong>
+              <span class="small float-right text-muted"><input type="button" id="theButton" value="보기" onclick="pictureChange2()"></span>
+              </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">
+              <strong>홍길순3.jpg</strong>
+              <span class="small float-right text-muted"><input type="button" id="theButton" value="보기" onclick="pictureChange3()"></span>
+              </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong></strong>
+              <span class="small float-right text-muted"></span>
+              </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong></strong>
+              <span class="small float-right text-muted"></span>
+              </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all messages</a>
+          </div>
+          </div>
+          <div class="form-row">
+          <div class="col-md-6">
+          <a class="btn btn-primary btn-block" href="/table">사진삭제</a>
+          </div>
+          <div class="col-md-6">
+          <a class="btn btn-primary btn-block" href="/table">업로드</a>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>

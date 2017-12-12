@@ -31,6 +31,10 @@ def memberedit():
 def missingedit():
     return render_template('missingedit.html')
 
+@app.route('/photo')
+def photo():
+    return render_template('photo.html')
+
 def hello_name(user):
     return render_template('template_base.html',myname=user)
 if __name__=='__main__':
