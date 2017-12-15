@@ -23,40 +23,40 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">회원등록</div>
       <div class="card-body">
-        <form>
+        <form action = "{{url_for('fixmissing')}}" method="post">
 			<div class="form-group">
               <div class="col-md-6">
                 <label for="exampleInputLastName">이름</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="이름을 입력하세요">
+                <input class="form-control" id="exampleInputLastName" type="text" name="Name" aria-describedby="nameHelp" placeholder="이름을 입력하세요">
               </div>
 			</div>
 			<div class="form-group">
               <div class="col-md-6">
                 <label for="exampleInputLastName">실종나이</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="실종연령">
+                <input class="form-control" id="exampleInputLastName" type="text" name="missing_age" aria-describedby="nameHelp" placeholder="실종연령">
               </div>
 			</div>
 			<div class="form-group">
               <div class="col-md-6">
                 <label for="exampleInputLastName">키</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="키">
+                <input class="form-control" id="exampleInputLastName" type="text" name="missing_height" aria-describedby="nameHelp" placeholder="키">
               </div>
 			</div>
 			<div class="form-group">
               <div class="col-md-6">
                 <label for="exampleInputLastName">몸무게</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="몸무게">
+                <input class="form-control" id="exampleInputLastName" type="text" name="missing_weight" aria-describedby="nameHelp" placeholder="몸무게">
               </div>
 			</div>
  		<div class="form-group">
             <label for="exampleInputEmail1">실종장소</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="실종장소">
+            <input class="form-control" id="exampleInputEmail1" type="text" name="disappearance_address" aria-describedby="emailHelp" placeholder="실종장소">
           </div>
  		<div class="form-group">
             <label for="exampleInputEmail1">실종날자</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="실종날자">
+            <input class="form-control" id="exampleInputEmail1" type="text" name="disappearance_date" aria-describedby="emailHelp" placeholder="실종날자">
           </div>
-          <a class="btn btn-primary btn-block" href="/table">등록</a>
+          <input class="btn btn-primary btn-block" type="submit" value="등록">
         </form>
       </div>
     </div>

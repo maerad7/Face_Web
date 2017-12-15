@@ -49,9 +49,6 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="/login">로그인</a>
-            </li>
-            <li>
               <a href="/register">회원등록</a>
             </li>
             <li>
@@ -81,8 +78,13 @@
           </form>
         </li>
         <li class="nav-item">
+        {% if session_user_name %}
+           <p>Hello <b>{{ session_user_name }}</b></p>
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>로그아웃</a>
+        {% else %}
+              <a class="nav-link-text" href="/login">로그인</a>
+        {% endif %}
         </li>
       </ul>
     </div>
@@ -115,7 +117,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">취소</button>
-            <a class="btn btn-primary" href="/login">로그아웃</a>
+            <a class="btn btn-primary" href="/logout">로그아웃</a>
           </div>
         </div>
       </div>
